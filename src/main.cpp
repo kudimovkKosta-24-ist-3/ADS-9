@@ -50,7 +50,7 @@ int main() {
         uint16_t time_1 = MeasureGetPerm1(tree, random_num);
         uint16_t time_2 = MeasureGetPerm2(tree, random_num);
 
-        std::cout << n << "\t" << time_all << "\t" << time_1 << "\t" 
+        std::cout << n << "\t" << time_all << "\t" << time_1 << "\t"
             << time_2 << "\n";
     }
 
