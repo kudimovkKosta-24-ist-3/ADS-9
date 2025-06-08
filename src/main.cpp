@@ -8,7 +8,7 @@
 // Функции измерения времени
 uint16_t MeasureGetAllPerms(PMTree& tree) {
     auto start = std::chrono::high_resolution_clock::now();
-    GetAllPerms(tree);
+    getAllPerms(tree);
     auto end = std::chrono::high_resolution_clock::now();
     return std::chrono::duration_cast<std::chrono::microseconds>
         (end - start).count();
@@ -16,7 +16,7 @@ uint16_t MeasureGetAllPerms(PMTree& tree) {
 
 uint16_t MeasureGetPerm1(PMTree& tree, int num) {
     auto start = std::chrono::high_resolution_clock::now();
-    GetPerm1(tree, num);
+    getPerm1(tree, num);
     auto end = std::chrono::high_resolution_clock::now();
     return std::chrono::duration_cast<std::chrono::microseconds>
         (end - start).count();
@@ -24,7 +24,7 @@ uint16_t MeasureGetPerm1(PMTree& tree, int num) {
 
 uint16_t MeasureGetPerm2(PMTree& tree, int num) {
     auto start = std::chrono::high_resolution_clock::now();
-    GetPerm2(tree, num);
+    getPerm2(tree, num);
     auto end = std::chrono::high_resolution_clock::now();
     return std::chrono::duration_cast<std::chrono::microseconds>
         (end - start).count();
