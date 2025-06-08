@@ -28,7 +28,7 @@ class PMTree {
     std::shared_ptr<Node> GetRoot() const;
     int GetPermutationCount() const;
 
-    void CollectPermutations(const std::shared_ptr<Node>& node,
+    static void CollectPermutations(const std::shared_ptr<Node>& node,
         std::vector<char>& path,
         std::vector<std::vector<char>>& result);
     friend void CountPermutationsImpl(const std::shared_ptr<Node>& node,
