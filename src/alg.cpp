@@ -119,7 +119,7 @@ bool FindNthPermutation(PMTree& tree,
 std::vector<char> getPerm1(PMTree& tree, int num) {
     int total = tree.GetPermutationCount();
     if (num < 1 || num > total) return {};
-    std::vector<std::vector<char>> all_perms = GetAllPerms(tree);
+    std::vector<std::vector<char>> all_perms = getAllPerms(tree);
     return all_perms[num - 1];
 }
 std::vector<char> getPerm2(PMTree& tree, int num) {
