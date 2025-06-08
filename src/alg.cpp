@@ -71,7 +71,8 @@ std::vector<std::vector<char>> GetAllPerms(PMTree& tree) {
     }
     return result;
 }
-static void CountPermutationsImpl(const std::shared_ptr<Node>& node, int& count) {
+void CountPermutationsImpl(const std::shared_ptr<Node>& node,
+    int& count) {
     if (node->children.empty()) {
         count = 1;
         return;
@@ -95,7 +96,7 @@ bool FindNthPermutation(PMTree& tree,
             int subtree_count = 0;
             CountPermutationsImpl(child, subtree_count);
             if (current_num + subtree_count >= target_num) {
-                if (FindNthPermutation(tree, child, path, 
+                if (FindNthPermutation(tree, child, path,
                     result, current_num, target_num)) {
                     return true;
                 }
