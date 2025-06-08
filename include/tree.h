@@ -34,13 +34,13 @@ class PMTree {
     friend void CountPermutationsImpl(const std::shared_ptr<Node>& node,
         int& count);
 
-    friend std::vector<std::vector<char>> GetAllPerms(PMTree& tree);
-    friend std::vector<char> GetPerm1(PMTree& tree, int num);
-    friend std::vector<char> GetPerm2(PMTree& tree, int num);
+    friend std::vector<std::vector<char>> getAllPerms(PMTree& tree);
+    friend std::vector<char> getPerm1(PMTree& tree, int num);
+    friend std::vector<char> getPerm2(PMTree& tree, int num);
 };
 
-std::vector<std::vector<char>> GetAllPerms(PMTree& tree);
-std::vector<char> GetPerm1(PMTree& tree, int num);
-std::vector<char> GetPerm2(PMTree& tree, int num);
+std::vector<std::vector<char>> getAllPerms(PMTree& tree);
+std::vector<char> getPerm1(PMTree& tree, int num);
+std::vector<char> getPerm2(PMTree& tree, int num);
 
 #endif  // INCLUDE_TREE_H_
